@@ -116,7 +116,8 @@ a {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.6);
+
   border-bottom: 1px solid #ffffff;
 }
 .header__background {
@@ -130,7 +131,12 @@ a {
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
   background: transparent;
+  background: rgba(0, 0, 0, 0.6);
+
   border-bottom: 1px solid #ffffff;
+}
+.header-policy-terms {
+  background: rgba(21, 27, 34, 1);
 }
 .header.is-open .header__background {
   left: 0;
@@ -180,14 +186,7 @@ a {
 }
 
 .navigation__list {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.1) 8%,
-    rgba(10, 93, 123, 0.2) 25%,
-    rgba(10, 93, 123, 0.5) 52%,
-    rgba(10, 93, 123, 0.7) 75%,
-    rgba(10, 93, 123, 1) 97%
-  );
+  background: rgba(21, 27, 34, 0.7);
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,9 +196,9 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  gap: 16px;
-  padding: 0 30px 0 70%;
+  align-items: center;
+  gap: 24px;
+  padding: 0 30px 0;
 
   top: 150px;
   position: absolute;
@@ -219,11 +218,10 @@ a {
   justify-content: center;
   position: relative;
   text-decoration: none;
-  font-family: Lora;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 36px;
-  letter-spacing: 0.01em;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -233,8 +231,15 @@ a {
 
 .navigation__link:hover,
 .navigation__link:focus {
-  text-shadow: 0px 0px 6px #ffffff;
-  text-decoration: underline;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .header.is-open {
@@ -249,8 +254,11 @@ a {
   }
   .header {
     height: 100px;
-
-    padding: 23px 120px;
+    padding: 16px 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .header-policy-terms {
+    background: rgba(21, 27, 34, 1);
   }
   .navigation__item-desk {
     display: none;
@@ -292,13 +300,13 @@ a {
   .navigation__link {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     text-decoration: none;
-    font-family: Lora;
+    font-family: Poppins;
     font-size: 16px;
-    font-weight: 300;
-    line-height: 36px;
-    letter-spacing: 0.01em;
+    font-weight: 400;
+    line-height: 24px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -820,18 +828,13 @@ a {
 }
 
 .reviews {
-  padding: 80px 10px;
+  padding: 62px 16px;
   margin: auto;
   width: 375px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  background-image: url("/image/reviews/BG-2.png");
 }
 
 .reviews-list {
@@ -841,49 +844,73 @@ a {
   margin: auto;
 }
 .reviews-item {
+  width: 343px;
+  height: 476px;
+
+  border-radius: 18.12px;
+
   margin: auto;
   padding: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-
-  gap: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/reviews/image\ \(1\).png");
 }
 .reviews-item-two {
-  flex-direction: row-reverse;
+  background-image: url("/img/reviews/image\ \(2\).png");
+}
+.reviews-item-three {
+  background-image: url("/img/reviews/image\ \(3\).png");
+}
+.reviews-item-container {
+  border-radius: 18.12px;
+  width: 310px;
+
+  padding: 16px;
+  background: #fff;
+  margin-top: 222px;
 }
 .reviews-item-img {
-  width: 140px;
-  height: 140px;
+  width: 51px;
+  height: 51px;
+
+  border-radius: 25.5px;
+  border: 5px solid #ffffff;
+  margin: 0 auto;
+  margin-top: -40px;
 }
 .reviews-text-bold {
-  font-family: Lora;
+  font-family: Poppins;
   font-size: 18px;
-  color: #000;
   font-weight: 600;
-
-  text-align: start;
+  line-height: 27px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: #181818;
 }
 .reviews-text {
-  font-family: Jost;
+  font-family: Poppins;
   font-size: 16px;
-  color: #000;
-  font-weight: 500;
-  padding-top: 16px;
-
-  text-align: start;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: #3c3c3c;
+  padding: 16px 0 20px;
+}
+.reviews-item-img-star {
+  margin: auto;
 }
 @media screen and (min-width: 1200px) {
   .reviews {
-    padding: 80px 0px;
+    padding: 100px 125px;
     margin: auto;
     width: 1440px;
-    height: 892px;
-    background-image: url("/image/reviews/BG-2\ \(1\).png");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -892,46 +919,243 @@ a {
 
   .reviews-list {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    height: 400px;
-    width: 1200px;
-    gap: 16px;
+    flex-direction: row;
+    gap: 39px;
     margin: auto;
   }
   .reviews-item {
-    width: 588px;
+    width: 370px;
+    height: 476px;
+
+    border-radius: 18.12px;
+
     margin: auto;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-
-    gap: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/reviews/image\ \(1\).png");
   }
+  .reviews-item-two {
+    background-image: url("/img/reviews/image\ \(2\).png");
+  }
+  .reviews-item-three {
+    background-image: url("/img/reviews/image\ \(3\).png");
+  }
+  .reviews-item-container {
+    border-radius: 18.12px;
+    width: 310px;
 
+    padding: 16px;
+    background: #fff;
+    margin-top: 222px;
+  }
   .reviews-item-img {
-    width: 182px;
-    height: 182px;
+    width: 51px;
+    height: 51px;
+
+    border-radius: 25.5px;
+    border: 5px solid #ffffff;
+    margin: 0 auto;
+    margin-top: -40px;
   }
   .reviews-text-bold {
-    font-size: 20px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181818;
   }
   .reviews-text {
-    font-family: Jost;
-    font-size: 18px;
-    color: #000;
-    font-weight: 500;
-    padding-top: 24px;
-    width: 281px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #3c3c3c;
+    padding: 16px 0 20px;
+  }
+  .reviews-item-img-star {
+    margin: auto;
   }
 }
+.prices {
+  padding: 61px 11px;
+  margin: auto;
+  width: 375px;
+  height: 1034px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/prices/Müşteri\ Yorumları.png");
 
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+.prices-title {
+  color: rgba(255, 255, 255, 1);
+
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.prices-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.prices-form-text {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  padding-bottom: 8px;
+}
+.prices-form-text-input {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  width: 348px;
+  height: 60px;
+  padding: 20px 24px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.prices-form-text-button {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(24, 24, 24, 1);
+  width: 343px;
+  height: 56px;
+  margin-top: 56px;
+  padding: 16px 32px 16px 32px;
+  gap: 10px;
+  border-radius: 12px;
+  opacity: 0px;
+  background: rgba(243, 225, 206, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1200px) {
+  .prices {
+    padding: 100px 200px;
+    margin: auto;
+    width: 1440px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/img/prices/Fiyatlar\ ve\ Rezervasyon\ .png");
+
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+  }
+  .prices-title {
+    color: rgba(255, 255, 255, 1);
+    width: 790px;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 33.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .prices-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .prices-form-text {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 8px;
+  }
+  .prices-form-text-input {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(255, 255, 255, 1);
+    width: 406px;
+    height: 60px;
+    padding: 20px 24px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .prices-form-text-button {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(24, 24, 24, 1);
+    width: 384px;
+    margin: auto;
+    height: 56px;
+    margin-top: 56px;
+    padding: 16px 32px 16px 32px;
+    gap: 10px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: rgba(243, 225, 206, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
 .contacts {
-  padding: 80px 16px 80px;
+  padding: 62px 16px;
   margin: auto;
   width: 375px;
   display: flex;
@@ -943,242 +1167,225 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/image//contacts/image\ \(1\).png");
-  width: 375px;
-  height: 390px;
-  margin-top: 32px;
-  padding-top: 293px;
+  background-image: url("/img/contacts/image\ \(4\).png");
+  width: 343px;
+  height: 424px;
+  margin: 42px auto 0;
+  border-radius: 12px;
+  padding-top: 255px;
 }
 
 .contacts-list {
   margin: 0px auto 0;
+
   display: flex;
   flex-direction: column;
 
   width: 344px;
   padding: 22px;
   gap: 10px;
-  border-radius: 11px;
-  background-color: #0a5d7b;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
 }
 .contacts-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 10px;
 }
 
 .contacts-text {
-  font-family: Lora;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.01em;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #ffffff;
-}
-.contacts-img-two {
-  width: 343px;
-  height: 200px;
-  gap: 0px;
-  border-radius: 4.31px 0px 0px 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
+
+  color: rgba(80, 89, 102, 1);
 }
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0;
+  padding: 32px 16px;
   margin: auto;
   gap: 16px;
 }
 .form-text-bold {
-  font-family: Lora;
+  font-family: Poppins;
   font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-  letter-spacing: 0.01em;
-  text-align: c;
-
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: rgba(24, 24, 24, 1);
 }
 
 .form-input {
-  width: 342px;
-  color: #b7b7b7;
-  padding: 10px;
-  background-color: transparent;
+  width: 343px;
+  padding: 16px;
+  border-radius: 8px;
+  color: rgba(24, 24, 24, 1);
   border: none;
-
-  border-bottom: 1px solid #b7b7b7;
-
-  font-family: Lora;
+  border: 1px solid rgba(80, 89, 102, 1);
+  font-family: Poppins;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
+  font-weight: 500;
+  line-height: 27px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.form-input-two {
-  border: 1px solid #b7b7b7;
-  border-radius: 10px;
-  margin-top: 24px;
-}
+
 .form-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 343px;
-  height: 52px;
-  padding: 11px 29px;
-  border-radius: 10px;
-  background: #0a5d7b;
-  border: none;
-
-  font-family: Lora;
-  font-size: 18px;
-  font-weight: 200;
-
-  letter-spacing: 0.04em;
-  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
+  width: 343px;
+  height: 56px;
+
+  padding: 16px 32px 16px 32px;
+
+  border-radius: 12px;
+
+  background: rgba(21, 27, 34, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 1200px) {
   .contacts {
-    padding: 80px 72px 104px;
     margin: auto;
     width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     justify-content: start;
+    padding: 0;
+    padding-right: 80px;
   }
   .contacts-form {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 31px;
   }
   .contacts-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("/image//contacts/image\ \(1\).png");
-    width: 485px;
-    height: 504px;
-    margin-top: 0;
-    padding-top: 0;
+    background-image: url("/img/contacts/image\ \(5\).png");
+    width: 705px;
+    height: 870px;
+
+    border-radius: 0px;
+
+    margin: 0;
+
+    padding-top: 685px;
   }
 
   .contacts-list {
-    margin: 293px auto 0;
+    margin: 0px auto 0;
+
     display: flex;
     flex-direction: column;
 
-    width: 318px;
-    padding: 22px;
+    width: 545px;
+    padding: 24px;
     gap: 10px;
-    border-radius: 11px;
-
-    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
   }
   .contacts-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 10px;
   }
 
   .contacts-text {
-    font-family: Lora;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.01em;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #3b5266;
+
+    color: rgba(80, 89, 102, 1);
   }
-  .contacts-img-two {
-    width: 343px;
-    height: 200px;
-    gap: 0px;
-    border-radius: 4.31px 0px 0px 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
-  }
+
   .form {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 32px 0;
+    padding: 0;
     margin: auto;
-    gap: 16px;
+    gap: 24px;
   }
   .form-text-bold {
-    font-family: Lora;
-    font-size: 32px;
-    font-weight: 700;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 36px;
-    letter-spacing: 0.01em;
-    text-align: start;
-
+    letter-spacing: 1px;
+    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+
+    color: rgba(24, 24, 24, 1);
   }
 
   .form-input {
-    width: 466px;
-    color: #b7b7b7;
-    padding: 10px;
-    background-color: transparent;
+    width: 624px;
+    padding: 16px;
+    border-radius: 8px;
+    color: rgba(24, 24, 24, 1);
     border: none;
-
-    border-bottom: 1px solid #b7b7b7;
-
-    font-family: Lora;
+    border: 1px solid rgba(80, 89, 102, 1);
+    font-family: Poppins;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 26px;
+    font-weight: 500;
+    line-height: 27px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
-  .form-input-two {
-    border: 1px solid #b7b7b7;
-    border-radius: 10px;
-    margin-top: 24px;
-  }
+
   .form-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 343px;
-    height: 52px;
-    padding: 11px 29px;
-    border-radius: 10px;
-    background: #0a5d7b;
-    border: none;
-
-    font-family: Lora;
-    font-size: 18px;
-    font-weight: 200;
-
-    letter-spacing: 0.04em;
-    text-align: left;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
+    width: 343px;
+    height: 56px;
+
+    padding: 16px 32px 16px 32px;
+
+    border-radius: 12px;
+
+    background: rgba(21, 27, 34, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 16px;
   }
 }
 
